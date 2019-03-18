@@ -24,5 +24,11 @@ namespace Bet
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Bet.Logica.Logica logica = new Logica.Logica();
+            logica.Test();
+        }
     }
 }
