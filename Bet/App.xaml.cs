@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Betx
+namespace Bet
 {
     /// <summary>
     /// Lógica de interacción para App.xaml

@@ -1,7 +1,7 @@
-﻿<Application x:Class="Betx.App"
+﻿<Application x:Class="Bet.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Betx"
+             xmlns:local="clr-namespace:Bet"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
