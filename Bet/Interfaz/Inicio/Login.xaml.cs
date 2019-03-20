@@ -19,9 +19,18 @@ namespace Bet.Inicio
     /// </summary>
     public partial class Login : Window
     {
+
+        Vista.Inicio.Login login = new Vista.Inicio.Login();
+
         public Login()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void Button_Click_Ingresar(object sender, RoutedEventArgs e)
+        {
+            var x = e;
+            login.EstadoInicial();
         }
     }
 }
