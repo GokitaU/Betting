@@ -73,6 +73,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Inicio\Recovery\Recovery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inicio\Registro\Registro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +112,12 @@
     </Compile>
     <Compile Include="Inicio\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Recovery\Recovery.xaml.cs">
+      <DependentUpon>Recovery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Registro\Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
     <Compile Include="Logica\Logica.cs" />
     <Compile Include="MainWindow.xaml.cs">
