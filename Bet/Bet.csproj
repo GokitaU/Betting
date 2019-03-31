@@ -69,8 +69,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Auxiliares\Inicio\Registro\Registro.cs" />
+    <Compile Include="Utils\Opciones.cs" />
     <Compile Include="Utils\Password.cs" />
     <Compile Include="Vista\Inicio\Login.cs" />
+    <Compile Include="Vista\Inicio\Registro\Registro.cs" />
     <Page Include="Interfaz\Inicio\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

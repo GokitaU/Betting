@@ -20,5 +20,21 @@
             else
                 this.Close();
         }
+
+        private void Button_Click_Cancelar(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Click_Recuperar(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_Registrar(object sender, RoutedEventArgs e)
+        {
+            Registro.Registro registro = new Registro.Registro();
+            registro.Show();
+        }
     }
 }
