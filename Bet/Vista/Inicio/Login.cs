@@ -49,14 +49,82 @@ namespace Bet.Vista.Inicio
         //    }
         //}
 
-        public string Username { get; set; }
+        private string username;
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                SetPropertyValue(ref username, value);
+            }
+        }
 
-        public string Password { get; set; }
+        private string password;
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                SetPropertyValue(ref password, value);
+            }
+        }
 
-        public void EstadoInicial()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void RaisePropertyChanged(string propertyName)
+        {
+            var handler = this.PropertyChanged;
+
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        protected bool SetPropertyValue<T>(ref T currentValue, T newValue, [CallerMemberName] String propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(currentValue, newValue))
+            {
+                return false;
+            }
+
+            currentValue = newValue;
+
+            this.RaisePropertyChanged(propertyName);
+
+            return true;
+        }
+
+        //public string Username { get; set; }
+
+        //public string Password { get; set; }
+
+        public string ValidacionLogin()
         {
             var username = Username;
             var password = Password;
+
+            if (string.IsNullOrEmpty(username) && (string.IsNullOrEmpty(password)))
+            {
+                return "Ingrese su usuario y contraseña";
+            }
+            else
+                if (username == "Hunter" && password == "PerroRojo")
+            {
+                return string.Empty;
+            }
+            else
+            {
+                //this.Username = string.Empty;
+                //this.Password = string.Empty;
+                return "Usuario o contraseña incorrecta";
+            }
         }
     }
 }

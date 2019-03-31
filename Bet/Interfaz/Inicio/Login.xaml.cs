@@ -1,26 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
-namespace Bet.Inicio
+﻿namespace Bet.Inicio
 {
+    using System.Windows;
     /// <summary>
     /// Lógica de interacción para Login.xaml
     /// </summary>
     public partial class Login : Window
     {
-
-        Vista.Inicio.Login login = new Vista.Inicio.Login();
 
         public Login()
         {
@@ -29,8 +14,11 @@ namespace Bet.Inicio
 
         private void Button_Click_Ingresar(object sender, RoutedEventArgs e)
         {
-            var x = e;
-            login.EstadoInicial();
+            string msj = ViewModel.ValidacionLogin();
+            if (msj != string.Empty)
+                MessageBox.Show(msj, "Bet", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
+                this.Close();
         }
     }
 }
