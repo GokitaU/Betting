@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bet.Conexion;
-
-namespace Bet.Logica
+﻿namespace Bet.Logica
 {
+    using System;
+    using System.Linq;
+    using Bet.Conexion;
+
     class Logica
     {
         public void Test()

@@ -1,7 +1,6 @@
 ﻿namespace Bet.Vista.Inicio.Registro
 {
     using Bet.Utils;
-    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
 
@@ -21,10 +20,7 @@
         private readonly ObservableCollection<Opciones> opcionesPreguntaSeguridad = new ObservableCollection<Opciones>();
         public IEnumerable<Opciones> OpcionesPreguntaSeguridad => opcionesPreguntaSeguridad;
 
-        public void Inicial()
-        {
-            CargarOpcionesSeguridad();
-        }
+        public void Inicial() => CargarOpcionesSeguridad();
 
         private void CargarOpcionesSeguridad()
         {
